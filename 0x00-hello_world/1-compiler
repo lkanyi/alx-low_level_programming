@@ -1,2 +1,2 @@
 #!/bin/bash
- task 1
+gcc -c $CFILE 
