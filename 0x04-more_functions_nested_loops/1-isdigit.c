@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _isdigit - check the code for a digit (0 through 9)
  *
- * Return: Always 0.
+ * Return: 1 if c is a digit
  */
-int main(void)
+int _isdigit(int c)
 {
     char c;
 
