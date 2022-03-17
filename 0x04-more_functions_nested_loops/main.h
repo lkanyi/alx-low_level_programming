@@ -3,4 +3,6 @@
 
 #include <stdio.h>
 
-main- check for uppercase character
+int _isupper(int c);
+
+#endif
