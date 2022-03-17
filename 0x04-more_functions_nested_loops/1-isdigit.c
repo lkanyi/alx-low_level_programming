@@ -2,10 +2,13 @@
 #include <stdio.h>
 
 /**
- * _isdigit - check the code for a digit (0 through 9)
+ * _isdigit - function that prints the sign of a number.
  *
- * Return: 1 if c is a digit
+ @c: is a digit
+ *
+ * Return: 1 if c is a digit, 0otherwiswe
  */
+
 int _isdigit(int c)
 {
     if (c >= '0' && c <= '9')
