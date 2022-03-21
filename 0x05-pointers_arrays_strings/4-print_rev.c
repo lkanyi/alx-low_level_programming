@@ -1,17 +1,20 @@
-#include <stdio.h>
-
-void print_rev(char *);
-
+#include "main.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char *str;
+ * print_rev - prints reversed string, followed by a new line
+ * @s: pointer to the string to print
+ * Return: void
+*/
 
-	str = "Holberton!";
-	print_rev(str);
-	return (0);
+void print_rev(char *s)
+{
+int i = 0;
+while (s[i])
+	i++;
+
+while (i--)
+{
+	_putchar(s[i]);
+}
+_putchar('\n');
+
 }
