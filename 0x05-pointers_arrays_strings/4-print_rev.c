@@ -1,25 +1,17 @@
-#include "main.h"
+#include <stdio.h>
+
+void print_rev(char *);
+
 /**
- * print_rev - prints a string in reverse order
- *@s: A pointer to an int that will be changed
+ * main - check the code for Holberton School students.
  *
- *Return: void which means our answer is correct
+ * Return: Always 0.
  */
-
-void print_rev(char *s)
+int main(void)
 {
-int i;
+	char *str;
 
-i = 0;
-while (s[i] != '\0')
-{
-i++;
-}
-
-for (i = i - 1 ; i >= 0; i--)
-{
-_putchar (s[i]);
-}
-
-_putchar ('\n');
+	str = "Holberton!";
+	print_rev(str);
+	return (0);
 }
