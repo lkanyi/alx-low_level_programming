@@ -1,23 +1,22 @@
-/*
- * File: 6-puts2.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**
- * puts2 - Prints one char out of two of a string.
- * @str: The string containing characters.
- */
+ * File: puts2.c- print alternating chars of string
+ * @str: string
+ * Return: void
+ * */
+
 void puts2(char *str)
 {
-	int index = 0, len = 0;
+	int i;
 
-	while (str[index++])
-		len++;
+	i=0;
+	while (str[i] != '\0')
+	{
+		if (i % 2 == 0)
+			_putchar(str[i]);
+		i++;
+	}
 
-	for (index = 0; index < len; index += 2)
-		_putchar(str[index]);
-
-	_putchar('\n');
+	_putchar('n\');
 }
