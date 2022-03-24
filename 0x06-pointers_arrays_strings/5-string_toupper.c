@@ -6,7 +6,7 @@
  */
 
 
-char *string_toupper(char *str)
+char *string_toupper(char *);
 {
 int i;
 
@@ -20,3 +20,4 @@ str[i] = str[i] - 32;
 
 return (str);
 }
+
