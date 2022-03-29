@@ -1,24 +1,17 @@
 #include "main.h"
-
-
+#include <stdio.h>
 
 /**
+ * set_string - sets the value of a pointer to a char
  *
- *  * set_string - sets the value of a pointer to a char
+ * @s: Double pointer
  *
- *   * @s: source adress.
+ * @to: Pointer
  *
- *    * @to: target adress.
- *
- *     * Return: no return.
- *
- *      */
+ * Return: Void
+ */
 
 void set_string(char **s, char *to)
-
 {
-
-		*s = to;
-
+	*s = to;
 }
-
