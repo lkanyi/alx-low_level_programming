@@ -1,4 +1,6 @@
 #include "main.h"
+#include "stdlib.h>"
+
 /**
  *create_array - array for prints a string
  *@size: number elements array
@@ -6,7 +8,7 @@
  *Return: pointer
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c);
 {
 char *buffer;
 unsigned int position;
