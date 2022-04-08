@@ -1,51 +1,31 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings.
- * @s1: first string
- * @s2: second string
- * @n: index
- * Return: char pointer
+ * *array_range - creates an array of integers
+ * @min: minimum value
+ * @max: maximum value
+ * Return: pointer to the created array
+ * or NULL if it fails
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+int *array_range(int min, int max)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+	int *a;
+	int b, size;
 
-	if (s1 == NULL)
-		s1 = "";
+	if (min > max)
+		return (NULL);
 
-	if (s2 == NULL)
-		s2 = "";
+	size = max - min + 1;
 
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
+	a = malloc(sizeof(*a) * size);
+	if (a == NULL)
+		return (NULL);
 
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
+	for (b = 0; min <= max; b++, min++)
+		a[b] = min;
 
-	if (n > size2)
-	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
-
-	if (p == NULL)
-		return (0);
-
-	for (i = 0; i < size1; i++)
-	{
-		p[i] = s1[i];
-	}
-
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
-
-return (p);
+	return (a);
 }
