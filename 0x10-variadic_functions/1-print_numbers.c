@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - prints numbers given as parameters
- * @separators:string to be printed between numbers
+ * @separators: string to be printed between numbers
  * @n: number of integers passed to the function 
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -24,5 +24,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_end(list);
 
-	printf("\n")
+	printf("\n");
 }
