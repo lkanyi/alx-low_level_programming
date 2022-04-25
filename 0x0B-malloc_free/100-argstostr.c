@@ -3,50 +3,43 @@
 
 /**
  * argstostr - concatenates all the arguments of a program.
- * @ac: argument count.
- * @av: argument vector.
+ * @ac: argument count- number of arguments.
+ * @av: argument vector- array of arguments.
  *
  * Return: pointer of an array of char
  */
 char *argstostr(int ac, char **av)
 {
-	char *aout;
-	int c, i, j, ia;
+	int i, j, k, len;
+	char *str;
 
-	if (ac == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (c = i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
-		if (av[i] == NULL)
-			return (NULL);
-
 		for (j = 0; av[i][j] != '\0'; j++)
-			c++;
-		c++;
+			len++;
+		len++;
 	}
 
-	aout = malloc((c + 1) * sizeof(char));
+	str = malloc(sizeof(char) * (len + 1));
 
-	if (aout == NULL)
-	{
-		free(aout);
+	if (str == NULL)
 		return (NULL);
-	}
 
-	for (i = j = ia = 0; ia < c; j++, ia++)
+	k = 0;
+
+	for (i = 0; i < ac; i++)
 	{
-		if (av[i][j] == '\0')
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			aout[ia] = '\n';
-			i++;
-			ia++;
-			j = 0;
+			str[k] = av[i][j];
+			k++;
 		}
-		if (ia < c - 1)
-			aout[ia] = av[i][j];
+		str[k] = '\n';
+		k++;
 	}
-	aout[ia] = '\0';
 
-	return (aout);
+	return (str);
 }
